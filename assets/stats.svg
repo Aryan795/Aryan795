@@ -24,17 +24,17 @@
 <text class="title fx" x="24" y="34" style="animation-delay:.05s">Aryan795 &#183; GitHub</text>
 <g class="fx" style="animation-delay:0.12s">
 <text class="label" x="24" y="66">Contributions</text>
-<text class="value" x="24" y="88">65</text>
+<text class="value" x="24" y="88">68</text>
 <text class="sub" x="56" y="88">past year</text>
 </g>
 <g class="fx" style="animation-delay:0.19s">
 <text class="label" x="238" y="66">Public repos</text>
-<text class="value" x="238" y="88">15</text>
+<text class="value" x="238" y="88">16</text>
 <text class="sub" x="270" y="88">sources only</text>
 </g>
 <g class="fx" style="animation-delay:0.26s">
 <text class="label" x="24" y="122">Merged PRs</text>
-<text class="value" x="24" y="144">4</text>
+<text class="value" x="24" y="144">3</text>
 <text class="sub" x="44" y="144">all time</text>
 </g>
 <g class="fx" style="animation-delay:0.33s">
@@ -45,31 +45,31 @@
 <text class="label fx" x="24" y="188" style="animation-delay:.45s">Most-used languages</text>
 <g><clipPath id="r"><rect x="24" y="196" width="412" height="9" rx="4.5"/></clipPath>
 <g clip-path="url(#r)">
-<rect class="bar" x="24.0" y="196" width="144.9" height="9" fill="#dea584" style="animation-delay:0.50s"/>
-<rect class="bar" x="168.9" y="196" width="76.0" height="9" fill="#e34c26" style="animation-delay:0.58s"/>
-<rect class="bar" x="244.9" y="196" width="49.0" height="9" fill="#3572A5" style="animation-delay:0.66s"/>
-<rect class="bar" x="293.9" y="196" width="36.7" height="9" fill="#3178c6" style="animation-delay:0.74s"/>
-<rect class="bar" x="330.6" y="196" width="35.2" height="9" fill="#f1e05a" style="animation-delay:0.82s"/>
-<rect class="bar" x="365.8" y="196" width="70.2" height="9" fill="#8b949e" opacity=".35" style="animation-delay:.9s"/>
+<rect class="bar" x="24.0" y="196" width="130.2" height="9" fill="#dea584" style="animation-delay:0.50s"/>
+<rect class="bar" x="154.2" y="196" width="85.7" height="9" fill="#3572A5" style="animation-delay:0.58s"/>
+<rect class="bar" x="239.9" y="196" width="68.3" height="9" fill="#e34c26" style="animation-delay:0.66s"/>
+<rect class="bar" x="308.2" y="196" width="33.0" height="9" fill="#3178c6" style="animation-delay:0.74s"/>
+<rect class="bar" x="341.3" y="196" width="31.6" height="9" fill="#f1e05a" style="animation-delay:0.82s"/>
+<rect class="bar" x="372.9" y="196" width="63.1" height="9" fill="#8b949e" opacity=".35" style="animation-delay:.9s"/>
 </g></g>
 <g class="fx" style="animation-delay:0.62s">
 <circle cx="28" cy="223" r="4" fill="#dea584"/>
-<text class="lang" x="37" y="227">Rust 35.2%</text>
+<text class="lang" x="37" y="227">Rust 31.6%</text>
 </g>
 <g class="fx" style="animation-delay:0.68s">
-<circle cx="104.0" cy="223" r="4" fill="#e34c26"/>
-<text class="lang" x="113.0" y="227">HTML 18.5%</text>
+<circle cx="104.0" cy="223" r="4" fill="#3572A5"/>
+<text class="lang" x="113.0" y="227">Python 20.8%</text>
 </g>
 <g class="fx" style="animation-delay:0.74s">
-<circle cx="180.0" cy="223" r="4" fill="#3572A5"/>
-<text class="lang" x="189.0" y="227">Python 11.9%</text>
+<circle cx="191.2" cy="223" r="4" fill="#e34c26"/>
+<text class="lang" x="200.2" y="227">HTML 16.6%</text>
 </g>
 <g class="fx" style="animation-delay:0.80s">
 <circle cx="267.2" cy="223" r="4" fill="#3178c6"/>
-<text class="lang" x="276.2" y="227">TypeScript 8.9%</text>
+<text class="lang" x="276.2" y="227">TypeScript 8.0%</text>
 </g>
 <g class="fx" style="animation-delay:0.86s">
 <circle cx="371.2" cy="223" r="4" fill="#f1e05a"/>
-<text class="lang" x="380.2" y="227">JavaScript 8.5%</text>
+<text class="lang" x="380.2" y="227">JavaScript 7.7%</text>
 </g>
 </svg>
