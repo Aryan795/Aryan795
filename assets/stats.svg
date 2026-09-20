@@ -28,7 +28,7 @@ text{font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
 <line x1="22" y1="42" x2="498" y2="42" stroke="#21262d"/>
 <g class="fx" style="animation-delay:0.10s">
 <text class="label" x="22" y="72"><tspan fill="#3fb950">&#9656;</tspan> contributions</text>
-<text class="value" x="22" y="96">99</text>
+<text class="value" x="22" y="96">97</text>
 <text class="sub" x="56" y="96">past year</text>
 </g>
 <g class="fx" style="animation-delay:0.17s">
@@ -38,7 +38,7 @@ text{font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
 </g>
 <g class="fx" style="animation-delay:0.24s">
 <text class="label" x="22" y="132"><tspan fill="#3fb950">&#9656;</tspan> merged PRs</text>
-<text class="value" x="22" y="156">4</text>
+<text class="value" x="22" y="156">3</text>
 <text class="sub" x="43" y="156">all time</text>
 </g>
 <g class="fx" style="animation-delay:0.31s">
@@ -49,34 +49,34 @@ text{font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
 <text class="label fx" x="22" y="203" style="animation-delay:.45s"><tspan fill="#3fb950">&#9656;</tspan> languages</text>
 <clipPath id="r"><rect x="22" y="212" width="476" height="8" rx="4"/></clipPath>
 <g clip-path="url(#r)">
-<rect class="bar" x="22.0" y="212" width="144.1" height="8" fill="#3572A5" style="animation-delay:0.50s"/>
-<rect class="bar" x="166.1" y="212" width="116.3" height="8" fill="#e34c26" style="animation-delay:0.58s"/>
-<rect class="bar" x="282.5" y="212" width="56.2" height="8" fill="#3178c6" style="animation-delay:0.66s"/>
-<rect class="bar" x="338.7" y="212" width="53.8" height="8" fill="#f1e05a" style="animation-delay:0.74s"/>
-<rect class="bar" x="392.5" y="212" width="34.9" height="8" fill="#89e051" style="animation-delay:0.82s"/>
-<rect class="bar" x="427.4" y="212" width="32.1" height="8" fill="#663399" style="animation-delay:0.90s"/>
-<rect class="bar" x="459.5" y="212" width="20.0" height="8" fill="#f34b7d" style="animation-delay:0.98s"/>
-<rect class="bar" x="479.6" y="212" width="18.4" height="8" fill="#A97BFF" style="animation-delay:1.06s"/>
+<rect class="bar" x="22.0" y="212" width="147.8" height="8" fill="#3572A5" style="animation-delay:0.50s"/>
+<rect class="bar" x="169.8" y="212" width="115.1" height="8" fill="#e34c26" style="animation-delay:0.58s"/>
+<rect class="bar" x="284.9" y="212" width="55.6" height="8" fill="#3178c6" style="animation-delay:0.66s"/>
+<rect class="bar" x="340.5" y="212" width="53.2" height="8" fill="#f1e05a" style="animation-delay:0.74s"/>
+<rect class="bar" x="393.7" y="212" width="34.5" height="8" fill="#89e051" style="animation-delay:0.82s"/>
+<rect class="bar" x="428.2" y="212" width="31.7" height="8" fill="#663399" style="animation-delay:0.90s"/>
+<rect class="bar" x="460.0" y="212" width="19.8" height="8" fill="#f34b7d" style="animation-delay:0.98s"/>
+<rect class="bar" x="479.8" y="212" width="18.2" height="8" fill="#A97BFF" style="animation-delay:1.06s"/>
 </g>
 <g class="fx" style="animation-delay:0.62s">
 <rect x="22" y="232" width="7" height="7" fill="#3572A5"/>
-<text class="lang" x="34" y="239">Python 30.3%</text>
+<text class="lang" x="34" y="239">Python 31.1%</text>
 </g>
 <g class="fx" style="animation-delay:0.67s">
 <rect x="108.80000000000001" y="232" width="7" height="7" fill="#e34c26"/>
-<text class="lang" x="120.80000000000001" y="239">HTML 24.4%</text>
+<text class="lang" x="120.80000000000001" y="239">HTML 24.2%</text>
 </g>
 <g class="fx" style="animation-delay:0.72s">
 <rect x="184.8" y="232" width="7" height="7" fill="#3178c6"/>
-<text class="lang" x="196.8" y="239">TypeScript 11.8%</text>
+<text class="lang" x="196.8" y="239">TypeScript 11.7%</text>
 </g>
 <g class="fx" style="animation-delay:0.77s">
 <rect x="293.20000000000005" y="232" width="7" height="7" fill="#f1e05a"/>
-<text class="lang" x="305.20000000000005" y="239">JavaScript 11.3%</text>
+<text class="lang" x="305.20000000000005" y="239">JavaScript 11.2%</text>
 </g>
 <g class="fx" style="animation-delay:0.82s">
 <rect x="401.6" y="232" width="7" height="7" fill="#89e051"/>
-<text class="lang" x="413.6" y="239">Shell 7.3%</text>
+<text class="lang" x="413.6" y="239">Shell 7.2%</text>
 </g>
 <g class="fx" style="animation-delay:0.87s">
 <rect x="22" y="248" width="7" height="7" fill="#663399"/>
@@ -88,7 +88,7 @@ text{font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
 </g>
 <g class="fx" style="animation-delay:0.97s">
 <rect x="152.4" y="248" width="7" height="7" fill="#A97BFF"/>
-<text class="lang" x="164.4" y="255">Kotlin 3.9%</text>
+<text class="lang" x="164.4" y="255">Kotlin 3.8%</text>
 </g>
 <rect class="cur" x="486" y="268" width="8" height="13"/>
 <rect width="520" height="292" fill="url(#scan)" opacity=".13"/>
