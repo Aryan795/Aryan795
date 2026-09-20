@@ -115,7 +115,7 @@ def build():
       <text class="name gr" x="40" y="146">{name}</text>
       <text class="name gc" x="40" y="146">{name}</text>
       <text class="name base" x="40" y="146">{name}</text>
-      <text class="sub" x="40" y="180">self-hosted systems &#183; embedded &#183; home automation</text>
+      <text class="sub" x="40" y="180">self-hosted systems &#183; applied ML &#183; embedded &#183; home automation</text>
     </g>
 
     <!-- prompt two -->

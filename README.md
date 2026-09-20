@@ -21,8 +21,14 @@ I build things that run on hardware I own. Most of my work orbits a home-automat
 self-hosting stack — a Proxmox host, a Raspberry Pi doing routing and DNS, a fleet of ESPHome
 devices — plus the tools I needed along the way and couldn't find anywhere.
 
+Increasingly that means running models locally rather than calling someone's API — wake-word
+detection and speech recognition on a Raspberry Pi, a FAISS-backed intent router that keeps ~85%
+of requests off a cloud LLM, and vision models for detection work. What interests me is finding
+where a small local model is genuinely enough, and being honest about where it isn't.
+
 A few of those turned into protocol reverse-engineering projects. B.Tech CSE at Lovely
-Professional University. I care about systems that keep running when nobody is watching them.
+Professional University, Oracle Agentic AI certified. I care about systems that keep running when
+nobody is watching them.
 
 ---
 
@@ -166,6 +172,10 @@ between physical presses and app actions. Two years of daily use.
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-0d1117?style=flat-square&logo=tensorflow&logoColor=58a6ff&labelColor=010409)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-0d1117?style=flat-square&logo=scikitlearn&logoColor=58a6ff&labelColor=010409)
 ![OpenCV](https://img.shields.io/badge/OpenCV-0d1117?style=flat-square&logo=opencv&logoColor=58a6ff&labelColor=010409)
+![NumPy](https://img.shields.io/badge/NumPy-0d1117?style=flat-square&logo=numpy&logoColor=58a6ff&labelColor=010409)
+![pandas](https://img.shields.io/badge/pandas-0d1117?style=flat-square&logo=pandas&logoColor=58a6ff&labelColor=010409)
+![Ollama](https://img.shields.io/badge/Ollama-0d1117?style=flat-square&logo=ollama&logoColor=58a6ff&labelColor=010409)
+![FAISS](https://img.shields.io/badge/FAISS-0d1117?style=flat-square&logo=meta&logoColor=58a6ff&labelColor=010409)
 
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-0d1117?style=flat-square&logo=postgresql&logoColor=adbac7&labelColor=010409)
 ![MySQL](https://img.shields.io/badge/MySQL-0d1117?style=flat-square&logo=mysql&logoColor=adbac7&labelColor=010409)
