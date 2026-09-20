@@ -50,7 +50,7 @@ text{font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
 <clipPath id="r"><rect x="22" y="212" width="476" height="8" rx="4"/></clipPath>
 <g clip-path="url(#r)">
 <rect class="bar" x="22.0" y="212" width="147.8" height="8" fill="#3572A5" style="animation-delay:0.50s"/>
-<rect class="bar" x="169.8" y="212" width="115.1" height="8" fill="#e34c26" style="animation-delay:0.58s"/>
+<rect class="bar" x="169.8" y="212" width="115.0" height="8" fill="#e34c26" style="animation-delay:0.58s"/>
 <rect class="bar" x="284.9" y="212" width="55.6" height="8" fill="#3178c6" style="animation-delay:0.66s"/>
 <rect class="bar" x="340.5" y="212" width="53.2" height="8" fill="#f1e05a" style="animation-delay:0.74s"/>
 <rect class="bar" x="393.7" y="212" width="34.5" height="8" fill="#89e051" style="animation-delay:0.82s"/>
