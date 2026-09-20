@@ -8,6 +8,15 @@ import json, os, subprocess, sys, urllib.request
 from html import escape
 
 LOGIN = os.environ.get("STATS_LOGIN", "Aryan795")
+# Languages the profile advertises. Anything else (build files, vendored trees,
+# languages not claimed as a skill) is left out of the chart.
+INCLUDE_LANGS = {
+    l.strip().lower()
+    for l in os.environ.get(
+        "INCLUDE_LANGS", "python,c++,c,java,javascript,typescript,kotlin,shell,html,css"
+    ).split(",")
+    if l.strip()
+}
 OUT = os.environ.get("STATS_OUT", "assets/stats.svg")
 
 QUERY = """
@@ -65,6 +74,8 @@ def summarise(user):
     for repo in repos:
         for edge in repo["languages"]["edges"]:
             name = edge["node"]["name"]
+            if name.lower() not in INCLUDE_LANGS:
+                continue
             entry = langs.setdefault(name, {"size": 0, "color": edge["node"]["color"] or "#8b949e"})
             entry["size"] += edge["size"]
     upstream = sum(
@@ -73,7 +84,7 @@ def summarise(user):
         if pr["repository"]["owner"]["login"].lower() != LOGIN.lower()
     )
     total = sum(v["size"] for v in langs.values()) or 1
-    top = sorted(langs.items(), key=lambda kv: -kv[1]["size"])[:5]
+    top = sorted(langs.items(), key=lambda kv: -kv[1]["size"])[:8]
     return {
         "repos": user["repositories"]["totalCount"],
         "stars": stars,
@@ -85,89 +96,98 @@ def summarise(user):
     }
 
 
-W, H = 460, 250
+W, H = 520, 292
+GREEN, BRIGHT, DIM, RED = "#3fb950", "#adbac7", "#6e7681", "#3fb950"
 
 
 def render(s):
     tiles = [
-        ("Contributions", s["contribs"], "past year"),
-        ("Public repos", s["repos"], "sources only"),
-        ("Merged PRs", s["merged"], "all time"),
-        ("Merged upstream", s["upstream"], "others' repos"),
+        ("contributions", s["contribs"], "past year"),
+        ("public repos", s["repos"], "sources"),
+        ("merged PRs", s["merged"], "all time"),
+        ("merged upstream", s["upstream"], "others' repos"),
     ]
     out = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" '
-        f'role="img" aria-label="GitHub statistics for {escape(LOGIN)}" font-family="\'Segoe UI\',Ubuntu,Helvetica,sans-serif">',
+        f'role="img" aria-label="GitHub statistics for {escape(LOGIN)}">',
         "<defs>",
-        '<linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">',
-        '<stop offset="0%" stop-color="#7aa2f7"/><stop offset="50%" stop-color="#bb9af7"/>'
-        '<stop offset="100%" stop-color="#7dcfff"/>',
+        '<clipPath id="fr"><rect x="0" y="0" width="%d" height="%d" rx="10"/></clipPath>' % (W, H),
+        '<pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">',
+        '<rect width="4" height="1" fill="#000" opacity=".55"/></pattern>',
+        '<linearGradient id="bgg" x1="0" y1="0" x2="0" y2="1">',
+        '<stop offset="0%" stop-color="#0d1117"/><stop offset="100%" stop-color="#010409"/>',
         "</linearGradient>",
         "<style>",
-        ".bg{fill:#ffffff;stroke:url(#edge);stroke-width:1.5}",
-        ".title{fill:#1f2328;font-size:15px;font-weight:700}",
-        ".label{fill:#59636e;font-size:10.5px}",
-        ".value{fill:#1f2328;font-size:20px;font-weight:700}",
-        ".sub{fill:#8b949e;font-size:8.5px}",
-        ".lang{fill:#1f2328;font-size:10px}",
-        "@media (prefers-color-scheme: dark){",
-        ".bg{fill:#0d1117}.title{fill:#e6edf3}.value{fill:#e6edf3}",
-        ".label{fill:#9198a1}.lang{fill:#e6edf3}.sub{fill:#6e7681}}",
-        ".fx{animation:in .6s ease backwards}",
+        "text{font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}",
+        f".prompt{{font-size:12px;fill:{RED}}}.path{{fill:{DIM}}}.cmd{{fill:{BRIGHT}}}",
+        f".label{{fill:{DIM};font-size:10px}}",
+        f".value{{fill:#e6edf3;font-size:21px;font-weight:700}}",
+        f".sub{{fill:#6e7681;font-size:8.5px}}",
+        f".lang{{fill:{BRIGHT};font-size:9.5px}}",
+        ".fx{animation:in .5s ease backwards}",
         "@keyframes in{from{opacity:0}to{opacity:1}}",
         "@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}",
         ".bar{transform-origin:left center;animation:grow .9s cubic-bezier(.3,.8,.4,1) backwards}",
-        "@media (prefers-reduced-motion: reduce){.fx,.bar{animation:none}}",
+        ".cur{fill:%s;animation:blink 1.05s steps(1) infinite}" % GREEN,
+        "@keyframes blink{50%{opacity:0}}",
+        "@media (prefers-reduced-motion: reduce){.fx,.bar,.cur{animation:none}}",
         "</style>",
         "</defs>",
-        f'<rect class="bg" x="1" y="1" width="{W-2}" height="{H-2}" rx="10"/>',
-        f'<text class="title fx" x="24" y="34" style="animation-delay:.05s">{escape(LOGIN)} &#183; GitHub</text>',
+        '<g clip-path="url(#fr)">',
+        f'<rect width="{W}" height="{H}" fill="url(#bgg)"/>',
+        '<text class="prompt" x="22" y="30">aryan@homelab<tspan class="path">:~$</tspan>'
+        '<tspan class="cmd" dx="7">cat stats.json</tspan></text>',
+        f'<line x1="22" y1="42" x2="{W-22}" y2="42" stroke="#21262d"/>',
     ]
 
-    # Four stat tiles in a 2x2 grid.
     for i, (label, value, sub) in enumerate(tiles):
-        x = 24 + (i % 2) * 214
-        y = 66 + (i // 2) * 56
-        d = 0.12 + i * 0.07
+        x = 22 + (i % 2) * 250
+        y = 72 + (i // 2) * 60
+        d = 0.10 + i * 0.07
         out += [
             f'<g class="fx" style="animation-delay:{d:.2f}s">',
-            f'<text class="label" x="{x}" y="{y}">{label}</text>',
-            f'<text class="value" x="{x}" y="{y+22}">{value:,}</text>',
-            f'<text class="sub" x="{x+len(f"{value:,}")*12+8}" y="{y+22}">{sub}</text>',
+            f'<text class="label" x="{x}" y="{y}"><tspan fill="{GREEN}">&#9656;</tspan> {label}</text>',
+            f'<text class="value" x="{x}" y="{y+24}">{value:,}</text>',
+            f'<text class="sub" x="{x+len(f"{value:,}")*13+8}" y="{y+24}">{sub}</text>',
             "</g>",
         ]
 
-    # Stacked language bar.
-    by = 196
-    out.append(f'<text class="label fx" x="24" y="{by-8}" style="animation-delay:.45s">Most-used languages</text>')
-    bw, bx = W - 48, 24.0
-    out.append(f'<g><clipPath id="r"><rect x="24" y="{by}" width="{bw}" height="9" rx="4.5"/></clipPath>')
+    by = 212
+    out.append(f'<text class="label fx" x="22" y="{by-9}" style="animation-delay:.45s"><tspan fill="{GREEN}">&#9656;</tspan> languages</text>')
+    bw, bx = W - 44, 22.0
+    out.append(f'<clipPath id="r"><rect x="22" y="{by}" width="{bw}" height="8" rx="4"/></clipPath>')
     out.append('<g clip-path="url(#r)">')
     for i, (_, pct, color) in enumerate(s["langs"]):
         seg = bw * pct / 100.0
         out.append(
-            f'<rect class="bar" x="{bx:.1f}" y="{by}" width="{seg:.1f}" height="9" fill="{color}" '
+            f'<rect class="bar" x="{bx:.1f}" y="{by}" width="{seg:.1f}" height="8" fill="{color}" '
             f'style="animation-delay:{.5+i*.08:.2f}s"/>'
         )
         bx += seg
-    if bx < 24 + bw - 0.5:
+    if bx < 22 + bw - 0.5:
         out.append(
-            f'<rect class="bar" x="{bx:.1f}" y="{by}" width="{24+bw-bx:.1f}" height="9" '
-            f'fill="#8b949e" opacity=".35" style="animation-delay:.9s"/>'
+            f'<rect class="bar" x="{bx:.1f}" y="{by}" width="{22+bw-bx:.1f}" height="8" '
+            f'fill="{DIM}" opacity=".3" style="animation-delay:.9s"/>'
         )
-    out.append("</g></g>")
+    out.append("</g>")
 
-    # Legend.
-    lx = 24
+    lx, ly = 22, by + 20
     for i, (name, pct, color) in enumerate(s["langs"]):
+        label = f"{name} {pct:.1f}%"
+        span = 22 + len(label) * 5.4
+        if lx + span > W - 22:          # wrap onto the next legend row
+            lx, ly = 22, ly + 16
         out += [
-            f'<g class="fx" style="animation-delay:{.62+i*.06:.2f}s">',
-            f'<circle cx="{lx+4}" cy="{by+27}" r="4" fill="{color}"/>',
-            f'<text class="lang" x="{lx+13}" y="{by+31}">{escape(name)} {pct:.1f}%</text>',
+            f'<g class="fx" style="animation-delay:{.62+i*.05:.2f}s">',
+            f'<rect x="{lx}" y="{ly}" width="7" height="7" fill="{color}"/>',
+            f'<text class="lang" x="{lx+12}" y="{ly+7}">{escape(label)}</text>',
             "</g>",
         ]
-        lx += 20 + len(f"{name} {pct:.1f}%") * 5.6
-    out.append("</svg>")
+        lx += span
+    out.append(f'<rect class="cur" x="{W-34}" y="{H-24}" width="8" height="13"/>')
+    out.append(f'<rect width="{W}" height="{H}" fill="url(#scan)" opacity=".13"/>')
+    out.append(f'<rect x="1" y="1" width="{W-2}" height="{H-2}" rx="10" fill="none" stroke="#30363d" stroke-width="1.5"/>')
+    out.append("</g></svg>")
     return "\n".join(out)
 
 

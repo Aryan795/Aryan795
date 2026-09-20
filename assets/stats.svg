@@ -1,75 +1,96 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="460" height="250" viewBox="0 0 460 250" role="img" aria-label="GitHub statistics for Aryan795" font-family="'Segoe UI',Ubuntu,Helvetica,sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="292" viewBox="0 0 520 292" role="img" aria-label="GitHub statistics for Aryan795">
 <defs>
-<linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
-<stop offset="0%" stop-color="#7aa2f7"/><stop offset="50%" stop-color="#bb9af7"/><stop offset="100%" stop-color="#7dcfff"/>
+<clipPath id="fr"><rect x="0" y="0" width="520" height="292" rx="10"/></clipPath>
+<pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+<rect width="4" height="1" fill="#000" opacity=".55"/></pattern>
+<linearGradient id="bgg" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#0d1117"/><stop offset="100%" stop-color="#010409"/>
 </linearGradient>
 <style>
-.bg{fill:#ffffff;stroke:url(#edge);stroke-width:1.5}
-.title{fill:#1f2328;font-size:15px;font-weight:700}
-.label{fill:#59636e;font-size:10.5px}
-.value{fill:#1f2328;font-size:20px;font-weight:700}
-.sub{fill:#8b949e;font-size:8.5px}
-.lang{fill:#1f2328;font-size:10px}
-@media (prefers-color-scheme: dark){
-.bg{fill:#0d1117}.title{fill:#e6edf3}.value{fill:#e6edf3}
-.label{fill:#9198a1}.lang{fill:#e6edf3}.sub{fill:#6e7681}}
-.fx{animation:in .6s ease backwards}
+text{font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
+.prompt{font-size:12px;fill:#3fb950}.path{fill:#6e7681}.cmd{fill:#adbac7}
+.label{fill:#6e7681;font-size:10px}
+.value{fill:#e6edf3;font-size:21px;font-weight:700}
+.sub{fill:#6e7681;font-size:8.5px}
+.lang{fill:#adbac7;font-size:9.5px}
+.fx{animation:in .5s ease backwards}
 @keyframes in{from{opacity:0}to{opacity:1}}
 @keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 .bar{transform-origin:left center;animation:grow .9s cubic-bezier(.3,.8,.4,1) backwards}
-@media (prefers-reduced-motion: reduce){.fx,.bar{animation:none}}
+.cur{fill:#3fb950;animation:blink 1.05s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+@media (prefers-reduced-motion: reduce){.fx,.bar,.cur{animation:none}}
 </style>
 </defs>
-<rect class="bg" x="1" y="1" width="458" height="248" rx="10"/>
-<text class="title fx" x="24" y="34" style="animation-delay:.05s">Aryan795 &#183; GitHub</text>
-<g class="fx" style="animation-delay:0.12s">
-<text class="label" x="24" y="66">Contributions</text>
-<text class="value" x="24" y="88">68</text>
-<text class="sub" x="56" y="88">past year</text>
+<g clip-path="url(#fr)">
+<rect width="520" height="292" fill="url(#bgg)"/>
+<text class="prompt" x="22" y="30">aryan@homelab<tspan class="path">:~$</tspan><tspan class="cmd" dx="7">cat stats.json</tspan></text>
+<line x1="22" y1="42" x2="498" y2="42" stroke="#21262d"/>
+<g class="fx" style="animation-delay:0.10s">
+<text class="label" x="22" y="72"><tspan fill="#3fb950">&#9656;</tspan> contributions</text>
+<text class="value" x="22" y="96">99</text>
+<text class="sub" x="56" y="96">past year</text>
 </g>
-<g class="fx" style="animation-delay:0.19s">
-<text class="label" x="238" y="66">Public repos</text>
-<text class="value" x="238" y="88">16</text>
-<text class="sub" x="270" y="88">sources only</text>
+<g class="fx" style="animation-delay:0.17s">
+<text class="label" x="272" y="72"><tspan fill="#3fb950">&#9656;</tspan> public repos</text>
+<text class="value" x="272" y="96">16</text>
+<text class="sub" x="306" y="96">sources</text>
 </g>
-<g class="fx" style="animation-delay:0.26s">
-<text class="label" x="24" y="122">Merged PRs</text>
-<text class="value" x="24" y="144">3</text>
-<text class="sub" x="44" y="144">all time</text>
+<g class="fx" style="animation-delay:0.24s">
+<text class="label" x="22" y="132"><tspan fill="#3fb950">&#9656;</tspan> merged PRs</text>
+<text class="value" x="22" y="156">4</text>
+<text class="sub" x="43" y="156">all time</text>
 </g>
-<g class="fx" style="animation-delay:0.33s">
-<text class="label" x="238" y="122">Merged upstream</text>
-<text class="value" x="238" y="144">2</text>
-<text class="sub" x="258" y="144">others' repos</text>
+<g class="fx" style="animation-delay:0.31s">
+<text class="label" x="272" y="132"><tspan fill="#3fb950">&#9656;</tspan> merged upstream</text>
+<text class="value" x="272" y="156">2</text>
+<text class="sub" x="293" y="156">others' repos</text>
 </g>
-<text class="label fx" x="24" y="188" style="animation-delay:.45s">Most-used languages</text>
-<g><clipPath id="r"><rect x="24" y="196" width="412" height="9" rx="4.5"/></clipPath>
+<text class="label fx" x="22" y="203" style="animation-delay:.45s"><tspan fill="#3fb950">&#9656;</tspan> languages</text>
+<clipPath id="r"><rect x="22" y="212" width="476" height="8" rx="4"/></clipPath>
 <g clip-path="url(#r)">
-<rect class="bar" x="24.0" y="196" width="130.2" height="9" fill="#dea584" style="animation-delay:0.50s"/>
-<rect class="bar" x="154.2" y="196" width="85.7" height="9" fill="#3572A5" style="animation-delay:0.58s"/>
-<rect class="bar" x="239.9" y="196" width="68.3" height="9" fill="#e34c26" style="animation-delay:0.66s"/>
-<rect class="bar" x="308.2" y="196" width="33.0" height="9" fill="#3178c6" style="animation-delay:0.74s"/>
-<rect class="bar" x="341.3" y="196" width="31.6" height="9" fill="#f1e05a" style="animation-delay:0.82s"/>
-<rect class="bar" x="372.9" y="196" width="63.1" height="9" fill="#8b949e" opacity=".35" style="animation-delay:.9s"/>
-</g></g>
+<rect class="bar" x="22.0" y="212" width="144.1" height="8" fill="#3572A5" style="animation-delay:0.50s"/>
+<rect class="bar" x="166.1" y="212" width="116.3" height="8" fill="#e34c26" style="animation-delay:0.58s"/>
+<rect class="bar" x="282.5" y="212" width="56.2" height="8" fill="#3178c6" style="animation-delay:0.66s"/>
+<rect class="bar" x="338.7" y="212" width="53.8" height="8" fill="#f1e05a" style="animation-delay:0.74s"/>
+<rect class="bar" x="392.5" y="212" width="34.9" height="8" fill="#89e051" style="animation-delay:0.82s"/>
+<rect class="bar" x="427.4" y="212" width="32.1" height="8" fill="#663399" style="animation-delay:0.90s"/>
+<rect class="bar" x="459.5" y="212" width="20.0" height="8" fill="#f34b7d" style="animation-delay:0.98s"/>
+<rect class="bar" x="479.6" y="212" width="18.4" height="8" fill="#A97BFF" style="animation-delay:1.06s"/>
+</g>
 <g class="fx" style="animation-delay:0.62s">
-<circle cx="28" cy="223" r="4" fill="#dea584"/>
-<text class="lang" x="37" y="227">Rust 31.6%</text>
+<rect x="22" y="232" width="7" height="7" fill="#3572A5"/>
+<text class="lang" x="34" y="239">Python 30.3%</text>
 </g>
-<g class="fx" style="animation-delay:0.68s">
-<circle cx="104.0" cy="223" r="4" fill="#3572A5"/>
-<text class="lang" x="113.0" y="227">Python 20.8%</text>
+<g class="fx" style="animation-delay:0.67s">
+<rect x="108.80000000000001" y="232" width="7" height="7" fill="#e34c26"/>
+<text class="lang" x="120.80000000000001" y="239">HTML 24.4%</text>
 </g>
-<g class="fx" style="animation-delay:0.74s">
-<circle cx="191.2" cy="223" r="4" fill="#e34c26"/>
-<text class="lang" x="200.2" y="227">HTML 16.6%</text>
+<g class="fx" style="animation-delay:0.72s">
+<rect x="184.8" y="232" width="7" height="7" fill="#3178c6"/>
+<text class="lang" x="196.8" y="239">TypeScript 11.8%</text>
 </g>
-<g class="fx" style="animation-delay:0.80s">
-<circle cx="267.2" cy="223" r="4" fill="#3178c6"/>
-<text class="lang" x="276.2" y="227">TypeScript 8.0%</text>
+<g class="fx" style="animation-delay:0.77s">
+<rect x="293.20000000000005" y="232" width="7" height="7" fill="#f1e05a"/>
+<text class="lang" x="305.20000000000005" y="239">JavaScript 11.3%</text>
 </g>
-<g class="fx" style="animation-delay:0.86s">
-<circle cx="371.2" cy="223" r="4" fill="#f1e05a"/>
-<text class="lang" x="380.2" y="227">JavaScript 7.7%</text>
+<g class="fx" style="animation-delay:0.82s">
+<rect x="401.6" y="232" width="7" height="7" fill="#89e051"/>
+<text class="lang" x="413.6" y="239">Shell 7.3%</text>
 </g>
-</svg>
+<g class="fx" style="animation-delay:0.87s">
+<rect x="22" y="248" width="7" height="7" fill="#663399"/>
+<text class="lang" x="34" y="255">CSS 6.7%</text>
+</g>
+<g class="fx" style="animation-delay:0.92s">
+<rect x="87.2" y="248" width="7" height="7" fill="#f34b7d"/>
+<text class="lang" x="99.2" y="255">C++ 4.2%</text>
+</g>
+<g class="fx" style="animation-delay:0.97s">
+<rect x="152.4" y="248" width="7" height="7" fill="#A97BFF"/>
+<text class="lang" x="164.4" y="255">Kotlin 3.9%</text>
+</g>
+<rect class="cur" x="486" y="268" width="8" height="13"/>
+<rect width="520" height="292" fill="url(#scan)" opacity=".13"/>
+<rect x="1" y="1" width="518" height="290" rx="10" fill="none" stroke="#30363d" stroke-width="1.5"/>
+</g></svg>
