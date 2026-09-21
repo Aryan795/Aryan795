@@ -28,8 +28,8 @@ text{font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
 <line x1="22" y1="42" x2="498" y2="42" stroke="#21262d"/>
 <g class="fx" style="animation-delay:0.10s">
 <text class="label" x="22" y="72"><tspan fill="#3fb950">&#9656;</tspan> contributions</text>
-<text class="value" x="22" y="96">97</text>
-<text class="sub" x="56" y="96">past year</text>
+<text class="value" x="22" y="96">101</text>
+<text class="sub" x="69" y="96">past year</text>
 </g>
 <g class="fx" style="animation-delay:0.17s">
 <text class="label" x="272" y="72"><tspan fill="#3fb950">&#9656;</tspan> public repos</text>
