@@ -28,7 +28,7 @@ text{font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
 <line x1="22" y1="42" x2="498" y2="42" stroke="#21262d"/>
 <g class="fx" style="animation-delay:0.10s">
 <text class="label" x="22" y="72"><tspan fill="#3fb950">&#9656;</tspan> contributions</text>
-<text class="value" x="22" y="96">101</text>
+<text class="value" x="22" y="96">103</text>
 <text class="sub" x="69" y="96">past year</text>
 </g>
 <g class="fx" style="animation-delay:0.17s">
@@ -38,12 +38,12 @@ text{font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
 </g>
 <g class="fx" style="animation-delay:0.24s">
 <text class="label" x="22" y="132"><tspan fill="#3fb950">&#9656;</tspan> merged PRs</text>
-<text class="value" x="22" y="156">3</text>
+<text class="value" x="22" y="156">4</text>
 <text class="sub" x="43" y="156">all time</text>
 </g>
 <g class="fx" style="animation-delay:0.31s">
 <text class="label" x="272" y="132"><tspan fill="#3fb950">&#9656;</tspan> merged upstream</text>
-<text class="value" x="272" y="156">2</text>
+<text class="value" x="272" y="156">3</text>
 <text class="sub" x="293" y="156">others' repos</text>
 </g>
 <text class="label fx" x="22" y="203" style="animation-delay:.45s"><tspan fill="#3fb950">&#9656;</tspan> languages</text>
