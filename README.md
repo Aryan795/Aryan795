@@ -32,16 +32,20 @@ nobody is watching them.
 
 ---
 
-## `$ git log --author=Aryan795 --merged`
+## `$ git log --author=Aryan795 upstream/main`
 
-Contributions to **[Suwayomi-WebUI](https://github.com/Suwayomi/Suwayomi-WebUI)**, the web client
-for a self-hosted manga server:
+Contributions to **[Suwayomi](https://github.com/Suwayomi)**, a self-hosted manga server — its web
+client ([Suwayomi-WebUI](https://github.com/Suwayomi/Suwayomi-WebUI)) and the server
+([Suwayomi-Server](https://github.com/Suwayomi/Suwayomi-Server)):
 
 | PR | Change | State |
 |---|---|---|
-| [#1159](https://github.com/Suwayomi/Suwayomi-WebUI/pull/1159) | Fuzzy search across the library | ![merged](https://img.shields.io/badge/merged-8957e5?style=flat-square) |
-| [#1160](https://github.com/Suwayomi/Suwayomi-WebUI/pull/1160) | Autocomplete in the search bar | ![merged](https://img.shields.io/badge/merged-8957e5?style=flat-square) |
-| [#1161](https://github.com/Suwayomi/Suwayomi-WebUI/pull/1161) | Remembered search history | ![open](https://img.shields.io/badge/open-3fb950?style=flat-square) |
+| WebUI [#1159](https://github.com/Suwayomi/Suwayomi-WebUI/pull/1159) | Fuzzy search across the library | ![merged](https://img.shields.io/badge/merged-8957e5?style=flat-square) |
+| WebUI [#1160](https://github.com/Suwayomi/Suwayomi-WebUI/pull/1160) | Autocomplete in the search bar | ![merged](https://img.shields.io/badge/merged-8957e5?style=flat-square) |
+| WebUI [#1161](https://github.com/Suwayomi/Suwayomi-WebUI/pull/1161) | Remembered search history | ![merged](https://img.shields.io/badge/merged-8957e5?style=flat-square) |
+| WebUI [#1164](https://github.com/Suwayomi/Suwayomi-WebUI/pull/1164) | Notifications for new library chapters | ![merged](https://img.shields.io/badge/merged-8957e5?style=flat-square) |
+| WebUI [#1179](https://github.com/Suwayomi/Suwayomi-WebUI/pull/1179) | Respect excluded scanlators in update notifications | ![merged](https://img.shields.io/badge/merged-8957e5?style=flat-square) |
+| Server [#2358](https://github.com/Suwayomi/Suwayomi-Server/pull/2358) | Option to mark duplicates of read chapters as read | ![open](https://img.shields.io/badge/open-3fb950?style=flat-square) |
 
 ---
 
